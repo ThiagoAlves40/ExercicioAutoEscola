@@ -1,0 +1,65 @@
+﻿@page
+@model ExercicioAutoEscola.Pages.Recepcao.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Recepcao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Recepcao.ID" />
+            <div class="form-group">
+                <label asp-for="Recepcao.Nome" class="control-label"></label>
+                <input asp-for="Recepcao.Nome" class="form-control" />
+                <span asp-validation-for="Recepcao.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.CPF" class="control-label"></label>
+                <input asp-for="Recepcao.CPF" class="form-control" />
+                <span asp-validation-for="Recepcao.CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.CTPS" class="control-label"></label>
+                <input asp-for="Recepcao.CTPS" class="form-control" />
+                <span asp-validation-for="Recepcao.CTPS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.dtNascimento" class="control-label"></label>
+                <input asp-for="Recepcao.dtNascimento" class="form-control" />
+                <span asp-validation-for="Recepcao.dtNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.Endereço" class="control-label"></label>
+                <input asp-for="Recepcao.Endereço" class="form-control" />
+                <span asp-validation-for="Recepcao.Endereço" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.Email" class="control-label"></label>
+                <input asp-for="Recepcao.Email" class="form-control" />
+                <span asp-validation-for="Recepcao.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recepcao.Senha" class="control-label"></label>
+                <input asp-for="Recepcao.Senha" class="form-control" />
+                <span asp-validation-for="Recepcao.Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

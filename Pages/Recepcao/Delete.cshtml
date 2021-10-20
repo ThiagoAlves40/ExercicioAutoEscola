@@ -1,0 +1,64 @@
+﻿@page
+@model ExercicioAutoEscola.Pages.Recepcao.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Recepcao</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.CPF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.CPF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.CTPS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.CTPS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.dtNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.dtNascimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Endereço)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Endereço)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Senha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Senha)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Recepcao.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

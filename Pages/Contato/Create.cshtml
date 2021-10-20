@@ -1,0 +1,47 @@
+﻿@page
+@model ExercicioAutoEscola.Pages.Contato.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Fale Conosco</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contato.Nome" class="control-label"></label>
+                <input asp-for="Contato.Nome" class="form-control" />
+                <span asp-validation-for="Contato.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contato.Email" class="control-label"></label>
+                <input asp-for="Contato.Email" class="form-control" />
+                <span asp-validation-for="Contato.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contato.Telefone" class="control-label"></label>
+                <input asp-for="Contato.Telefone" class="form-control" />
+                <span asp-validation-for="Contato.Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contato.Mensagem" class="control-label"></label>
+                <input asp-for="Contato.Mensagem" class="form-control" />
+                <span asp-validation-for="Contato.Mensagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

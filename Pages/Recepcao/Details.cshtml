@@ -1,0 +1,61 @@
+﻿@page
+@model ExercicioAutoEscola.Pages.Recepcao.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Recepcao</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.CPF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.CPF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.CTPS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.CTPS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.dtNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.dtNascimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Endereço)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Endereço)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recepcao.Senha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recepcao.Senha)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Recepcao.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
